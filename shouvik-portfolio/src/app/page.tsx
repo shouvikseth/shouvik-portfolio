@@ -20,10 +20,10 @@ const PROFILE = {
     "M.S. CS (AI) @ Rutgers. 3+ years building AI-driven QA platforms, chatbot evaluation systems, and automation at Infosys. I love turning ideas into reliable, user-friendly tools.",
   email: "shouvikseth372@gmail.com",
   phone: "+1 (919) 309-6249",
-  resumeUrl: "#", // replace with a real link or /resume.pdf
+  resumeUrl: "/resume_Shouvik_Seth.pdf",
   links: {
     github: "https://github.com/shouvikseth",
-    linkedin: "www.linkedin.com/in/shouvik-seth-94914b227",
+    linkedin: "https://www.linkedin.com/in/shouvik-seth-94914b227/",
   },
 };
 
@@ -93,7 +93,7 @@ const EXPERIENCE = [
     org: "Infosys India Pvt. Ltd.",
     date: "Sep 2021 — Dec 2024",
     points: [
-      "Built AI-driven QA platforms and chatbot evaluation systems", 
+      "Built AI-driven QA platforms and chatbot evaluation systems",
       "Led 4-6 engineers; delivered market-ready automation tools",
       "Integrated Selenium pipelines, DOM parsers, and CI/CD",
     ],
@@ -192,13 +192,13 @@ export default function Portfolio() {
             </div>
             <div className="flex gap-3 pt-1">
               <Button asChild className="rounded-2xl">
-                <a href={PROFILE.resumeUrl} target="_blank" rel="noreferrer">
+                <a href={PROFILE.resumeUrl} target="_blank" rel="noreferrer" download>
                   <Download className="mr-2 size-4" /> Download Résumé
                 </a>
               </Button>
-              <Button variant="outline" asChild className="rounded-2xl">
+              {/* <Button variant="outline" asChild className="rounded-2xl">
                 <a href={`mailto:${PROFILE.email}`}>Contact Me</a>
-              </Button>
+              </Button> */}
             </div>
           </div>
           <Card className="rounded-2xl">
