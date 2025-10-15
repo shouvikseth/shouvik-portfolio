@@ -48,42 +48,42 @@ const PROJECTS = [
     blurb:
       "Enterprise QA automation with LLM-assisted test generation, DOM extraction, and CI pipelines.",
     tags: ["AI", "Automation", "Backend"],
-    links: [{ label: "Case Study", href: "#" }],
+    // links: [{ label: "Case Study", href: "#" }],
   },
   {
     title: "Chatbot Evaluation System",
     blurb:
       "Conversation relevancy, completeness, and retention metrics with DeepEval + Botpress.",
     tags: ["AI", "NLP", "Full-stack"],
-    links: [{ label: "Repo", href: "#" }],
+    // links: [{ label: "Repo", href: "#" }],
   },
   {
     title: "Visual-Inertial Odometry (VIO)",
     blurb:
       "Monocular/stereo + IMU odometry on KITTI/EuRoC with filtering and robust tracking.",
     tags: ["Robotics", "Perception"],
-    links: [{ label: "Notes", href: "#" }],
+    // links: [{ label: "Notes", href: "#" }],
   },
   {
     title: "Space Rat Pursuit",
     blurb:
       "Probabilistic pursuit with knowledge updates and entropy tracking vs baseline strategies.",
     tags: ["AI", "Search"],
-    links: [{ label: "Write-up", href: "#" }],
+    // links: [{ label: "Write-up", href: "#" }],
   },
   {
     title: "Semi-External MST",
     blurb:
       "O(n) RAM MST for dense graphs (Θ(n²) edges) — I/O-aware algorithm design.",
     tags: ["Algorithms"],
-    links: [{ label: "Paper Draft", href: "#" }],
+    // links: [{ label: "Paper Draft", href: "#" }],
   },
   {
     title: "ROS/LIDAR Security Bot",
     blurb:
       "Room mapping + patrol behaviors using ROS Noetic, Arduino, and 2D LIDAR.",
     tags: ["Robotics"],
-    links: [{ label: "Demo", href: "#" }],
+    // links: [{ label: "Demo", href: "#" }],
   },
 ];
 
@@ -145,13 +145,13 @@ function ProjectCard({ p }: { p: (typeof PROJECTS)[number] }) {
               <Badge key={t} variant="secondary" className="rounded-full">{t}</Badge>
             ))}
           </div>
-          <div className="flex gap-3 pt-1">
+          {/* <div className="flex gap-3 pt-1">
             {p.links?.map((l) => (
               <a key={l.href} href={l.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-sm hover:underline">
                 <ExternalLink className="size-4" /> {l.label}
               </a>
             ))}
-          </div>
+          </div> */}
         </CardContent>
       </Card>
     </motion.div>
