@@ -14,10 +14,10 @@ import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, GraduationCap, 
 // --- Profile Data (edit these!) ---
 const PROFILE = {
   name: "Shouvik Seth",
-  tagline: "Software Engineering • Surgical Robotics • AI/Automation",
+  tagline: "AI Engineering • Surgical Robotics • Embedded Systems",
   location: "New Brunswick, NJ",
   summary:
-    "M.S. Computer Science student at Rutgers with 3+ years of software engineering experience and recent surgical robotics experience at Asensus Surgical. I build reliable software across C++, Python, automation, real-time visualization, AI/ML, and robotics.",
+    "M.S. Computer Science (AI) candidate at Rutgers with 3+ years of software engineering experience at Infosys and hands-on medical robotics engineering at KARL STORZ (formerly Asensus Surgical), spanning EtherCAT firmware, DDS-driven software, real-time 3D visualization, and AI-assisted test automation.",
   email: "shouvikseth372@gmail.com",
   phone: "+1 (919) 309-6249",
   resumeUrl: "/Shouvik_Seth_Resume_2026.pdf",
@@ -28,92 +28,116 @@ const PROFILE = {
 };
 
 const SKILLS = [
-  { name: "C++", level: 5, group: "Languages" },
   { name: "Python", level: 5, group: "Languages" },
+  { name: "C++", level: 4, group: "Languages" },
   { name: "Java", level: 4, group: "Languages" },
-  { name: "JavaScript/TypeScript", level: 4, group: "Languages" },
+  { name: "JavaScript / TypeScript", level: 4, group: "Languages" },
   { name: "SQL", level: 4, group: "Languages" },
-  { name: "React / Next.js", level: 4, group: "Frameworks" },
-  { name: "Django / Node.js", level: 4, group: "Frameworks" },
-  { name: "PyTorch / OpenCV", level: 4, group: "AI/ML" },
-  { name: "ROS / Robotics", level: 4, group: "Robotics" },
+  { name: "PyTorch / TensorFlow", level: 4, group: "AI/ML" },
+  { name: "OpenCV / Computer Vision", level: 4, group: "AI/ML" },
+  { name: "LLMs / RAG / DeepEval", level: 5, group: "AI/ML" },
+  { name: "Django / Flask", level: 4, group: "Frameworks" },
+  { name: "React / Angular / Node.js", level: 4, group: "Frameworks" },
+  { name: "EtherCAT / CoE / EEPROM", level: 4, group: "Embedded" },
   { name: "DDS / Real-time Systems", level: 4, group: "Robotics" },
+  { name: "ROS / LiDAR / RViz", level: 4, group: "Robotics" },
+  { name: "Docker / Kubernetes / CI/CD", level: 4, group: "Cloud" },
   { name: "Selenium / Test Automation", level: 5, group: "Automation" },
-  { name: "Git / CI/CD / Linux", level: 4, group: "Tooling" },
 ];
 
 const PROJECTS = [
   {
-    title: "Surgical Handle Tracking Visualizer",
+    title: "Surgical Handle Tracking Visualization",
     blurb:
-      "Built a C++/Python diagnostic workflow for surgical robotics handle-tracking data, including MCAP/CSV replay, live DDS integration, quaternion validation, and real-time 3D visualization with Rerun.",
-    tags: ["Robotics", "Perception", "Automation"],
+      "Built a Rerun-based real-time and replay 3D visualization pipeline for surgical handle tracking data across CSV, MCAP, mock, and live DDS modes, surfacing pose, motion trails, latency, jitter, and dropout diagnostics.",
+    tags: ["Robotics", "Real-time", "Perception"],
   },
   {
-    title: "Automated C++ Test Coverage Workflow",
+    title: "EtherCAT Firmware Device Information",
     blurb:
-      "Developed automated testing workflows for production C++ software, targeting state machines, DDS callbacks, event-driven behavior, and difficult coverage paths in a medical robotics codebase.",
-    tags: ["Automation", "Backend"],
+      "Implemented a new CoE 0x2200 device-information object in surgical-handle firmware by extending the SSC object dictionary and ESI definition, with EEPROM persistence for vendor, model, serial, revision, and device metadata.",
+    tags: ["Firmware", "Embedded", "Robotics"],
+  },
+  {
+    title: "DDS-Driven Robot Console Update Mode",
+    blurb:
+      "Delivered a firmware-flashing Update Mode for the Robot Console with DDS-backed event handling, application state management, and a fullscreen operator UI that reports progress, success, failure, and device-specific status.",
+    tags: ["Robotics", "Real-time", "Full-stack"],
+  },
+  {
+    title: "Multi-Agent Unit Test Automation",
+    blurb:
+      "Designed a conductor/implementer/reviewer agent workflow with an approval gate and persistent audit trail to generate and validate C++ unit tests for safety-critical software and support IEC 62304 Class B/C development workflows.",
+    tags: ["AI", "Automation", "Embedded"],
+  },
+  {
+    title: "Applied AI Platform for Quality Engineering",
+    blurb:
+      "Helped architect and deliver GPT-4 and Llama-powered enterprise QA automation across 12 client accounts, including asynchronous API pipelines, DOM extraction, multi-agent workflows, and large-scale automated test execution.",
+    tags: ["AI", "Automation", "Backend"],
   },
   {
     title: "AI Assurance Platform",
     blurb:
-      "Built enterprise QA automation capabilities with LLM-assisted workflows, DOM extraction, Selenium-based testing, backend services, and CI/CD integration.",
-    tags: ["AI", "Automation", "Full-stack"],
-  },
-  {
-    title: "Chatbot Evaluation System",
-    blurb:
-      "Developed a full-stack evaluation workflow for conversational AI using relevancy, completeness, retention, and LLM-based quality metrics.",
+      "Engineered an LLM evaluation framework integrating DeepEval and Botpress APIs for Relevancy, Completeness, and Retention metrics, with a Django and Angular analytics dashboard for model-quality analysis.",
     tags: ["AI", "NLP", "Full-stack"],
   },
   {
-    title: "Visual-Inertial Odometry (VIO)",
+    title: "Cloud-Based LLM Evaluation System",
     blurb:
-      "Explored monocular/stereo visual-inertial odometry on KITTI/EuRoC using filtering, feature tracking, and robust pose-estimation techniques.",
-    tags: ["Robotics", "Perception"],
+      "Architected a Kubernetes-orchestrated microservice platform for scalable LLM benchmarking, integrating DeepEval metrics and custom explainability modules to surface actionable model-quality insights.",
+    tags: ["AI", "Cloud", "Backend"],
   },
   {
-    title: "Semi-External Minimum Spanning Tree",
+    title: "Room Mapping Robot",
     blurb:
-      "Implemented an I/O-aware MST approach for dense graphs under an O(n) RAM constraint, emphasizing algorithmic efficiency and external-memory tradeoffs.",
-    tags: ["Algorithms"],
+      "Developed an autonomous environment-mapping robot using ROS Noetic, LiDAR sensing, and Arduino-based actuation, validating perception and navigation behavior in RViz and MATLAB before hardware deployment.",
+    tags: ["Robotics", "Embedded", "Perception"],
+  },
+  {
+    title: "This Bot is on Fire",
+    blurb:
+      "Designed an intelligent navigation agent combining A* search and probabilistic reasoning to plan under uncertainty in stochastic fire-spread grid environments.",
+    tags: ["AI", "Algorithms"],
   },
 ];
 
 const EXPERIENCE = [
   {
-    role: "Software Development Intern",
-    org: "Asensus Surgical",
+    role: "Software Engineering Intern",
+    org: "KARL STORZ (formerly Asensus Surgical)",
     date: "May 2026 — Aug 2026",
     points: [
-      "Developed software and engineering tools for a surgical robotics platform using C++ and Python",
-      "Built a real-time 3D visualization and replay workflow for surgical handle-tracking data using Rerun, MCAP/CSV, and DDS",
-      "Improved automated testing and coverage for event-driven C++ components, including state machines and middleware callbacks",
+      "Delivered firmware, real-time visualization, and AI-assisted QA tooling for a Class B/C surgical robotics platform",
+      "Built a Rerun visualization pipeline supporting CSV, MCAP, mock, and live DDS handle-tracking inputs",
+      "Implemented an EtherCAT CoE device-information object with SSC/ESI integration and EEPROM persistence",
+      "Delivered a DDS-driven Robot Console Update Mode for firmware-flashing status and device-specific feedback",
+      "Designed a multi-agent unit-test generation workflow with approval gates and audit-ready traceability",
     ],
   },
   {
-    role: "Software Test Analyst → Lead Developer",
+    role: "Software Engineer — AI & QA Automation",
     org: "Infosys India Pvt. Ltd.",
-    date: "Sep 2021 — Jul 2024",
+    date: "Sep 2021 — Dec 2024",
     points: [
-      "Built AI-driven QA platforms, Selenium automation tools, and chatbot evaluation systems",
-      "Led developers and delivered production automation features for enterprise clients",
-      "Worked across Python, Java, Angular, Node.js, backend services, DOM tooling, and CI/CD",
+      "Delivered AI-powered enterprise platforms across 12 clients and helped reduce QA and release-cycle effort",
+      "Built GPT-4 and Llama-powered automation workflows, asynchronous APIs, DOM extraction pipelines, and multi-agent tooling",
+      "Engineered LLM evaluation systems using DeepEval, Botpress, Django, and Angular",
+      "Worked across Python, Java, JavaScript, SQL, Selenium, cloud infrastructure, and CI/CD",
     ],
   },
   {
-    role: "M.S. in Computer Science",
+    role: "M.S. in Computer Science (AI)",
     org: "Rutgers University–New Brunswick",
     date: "Jan 2025 — Present",
     points: [
-      "Focus areas: artificial intelligence, algorithms, robotics, computer vision, and systems",
-      "Projects include visual-inertial odometry, probabilistic search, computer vision, and memory-constrained graph algorithms",
+      "Graduate study spanning artificial intelligence, algorithms, robotics, computer vision, and computer systems",
+      "Academic projects include probabilistic navigation, visual perception, robotics, and memory-constrained algorithms",
     ],
   },
 ];
 
-const TAGS = ["All", "Robotics", "Perception", "Automation", "AI", "Full-stack", "NLP", "Algorithms", "Backend"] as const;
+const TAGS = ["All", "Robotics", "Firmware", "Embedded", "Real-time", "Perception", "AI", "Automation", "Full-stack", "NLP", "Cloud", "Backend", "Algorithms"] as const;
 
 type Tag = (typeof TAGS)[number];
 
@@ -180,7 +204,7 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="grid md:grid-cols-[1.2fr_1fr] gap-6 items-center">
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
-              <Rocket className="size-3.5" /> Open to software, robotics & AI opportunities
+              <Rocket className="size-3.5" /> Open to AI, software & robotics opportunities
             </div>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
               {PROFILE.name}
