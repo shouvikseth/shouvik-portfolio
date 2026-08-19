@@ -14,13 +14,13 @@ import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, GraduationCap, 
 // --- Profile Data (edit these!) ---
 const PROFILE = {
   name: "Shouvik Seth",
-  tagline: "Full-stack • AI/QA Automation • Robotics",
+  tagline: "Software Engineering • Surgical Robotics • AI/Automation",
   location: "New Brunswick, NJ",
   summary:
-    "M.S. CS (AI) @ Rutgers. 3+ years building AI-driven QA platforms, chatbot evaluation systems, and automation at Infosys. I love turning ideas into reliable, user-friendly tools.",
+    "M.S. Computer Science student at Rutgers with 3+ years of software engineering experience and recent surgical robotics experience at Asensus Surgical. I build reliable software across C++, Python, automation, real-time visualization, AI/ML, and robotics.",
   email: "shouvikseth372@gmail.com",
   phone: "+1 (919) 309-6249",
-  resumeUrl: "/resume_Shouvik_Seth.pdf",
+  resumeUrl: "/Shouvik_Seth_Resume_2026.pdf",
   links: {
     github: "https://github.com/shouvikseth",
     linkedin: "https://www.linkedin.com/in/shouvik-seth-94914b227/",
@@ -28,88 +28,92 @@ const PROFILE = {
 };
 
 const SKILLS = [
-  { name: "Java", level: 5, group: "Languages" },
+  { name: "C++", level: 5, group: "Languages" },
   { name: "Python", level: 5, group: "Languages" },
+  { name: "Java", level: 4, group: "Languages" },
   { name: "JavaScript/TypeScript", level: 4, group: "Languages" },
   { name: "SQL", level: 4, group: "Languages" },
-  { name: "Django", level: 4, group: "Frameworks" },
-  { name: "Angular", level: 4, group: "Frameworks" },
-  { name: "Node.js", level: 4, group: "Frameworks" },
-  { name: "Spring Boot", level: 3, group: "Frameworks" },
-  { name: "TensorFlow / PyTorch", level: 3, group: "AI/ML" },
-  { name: "OpenCV", level: 3, group: "AI/ML" },
-  { name: "ROS / LIDAR", level: 4, group: "Robotics" },
-  { name: "Selenium / QA", level: 5, group: "Automation" },
+  { name: "React / Next.js", level: 4, group: "Frameworks" },
+  { name: "Django / Node.js", level: 4, group: "Frameworks" },
+  { name: "PyTorch / OpenCV", level: 4, group: "AI/ML" },
+  { name: "ROS / Robotics", level: 4, group: "Robotics" },
+  { name: "DDS / Real-time Systems", level: 4, group: "Robotics" },
+  { name: "Selenium / Test Automation", level: 5, group: "Automation" },
+  { name: "Git / CI/CD / Linux", level: 4, group: "Tooling" },
 ];
 
 const PROJECTS = [
   {
-    title: "AI Assurance Platform (Infosys)",
+    title: "Surgical Handle Tracking Visualizer",
     blurb:
-      "Enterprise QA automation with LLM-assisted test generation, DOM extraction, and CI pipelines.",
-    tags: ["AI", "Automation", "Backend"],
-    // links: [{ label: "Case Study", href: "#" }],
+      "Built a C++/Python diagnostic workflow for surgical robotics handle-tracking data, including MCAP/CSV replay, live DDS integration, quaternion validation, and real-time 3D visualization with Rerun.",
+    tags: ["Robotics", "Perception", "Automation"],
+  },
+  {
+    title: "Automated C++ Test Coverage Workflow",
+    blurb:
+      "Developed automated testing workflows for production C++ software, targeting state machines, DDS callbacks, event-driven behavior, and difficult coverage paths in a medical robotics codebase.",
+    tags: ["Automation", "Backend"],
+  },
+  {
+    title: "AI Assurance Platform",
+    blurb:
+      "Built enterprise QA automation capabilities with LLM-assisted workflows, DOM extraction, Selenium-based testing, backend services, and CI/CD integration.",
+    tags: ["AI", "Automation", "Full-stack"],
   },
   {
     title: "Chatbot Evaluation System",
     blurb:
-      "Conversation relevancy, completeness, and retention metrics with DeepEval + Botpress.",
+      "Developed a full-stack evaluation workflow for conversational AI using relevancy, completeness, retention, and LLM-based quality metrics.",
     tags: ["AI", "NLP", "Full-stack"],
-    // links: [{ label: "Repo", href: "#" }],
   },
   {
     title: "Visual-Inertial Odometry (VIO)",
     blurb:
-      "Monocular/stereo + IMU odometry on KITTI/EuRoC with filtering and robust tracking.",
+      "Explored monocular/stereo visual-inertial odometry on KITTI/EuRoC using filtering, feature tracking, and robust pose-estimation techniques.",
     tags: ["Robotics", "Perception"],
-    // links: [{ label: "Notes", href: "#" }],
   },
   {
-    title: "Space Rat Pursuit",
+    title: "Semi-External Minimum Spanning Tree",
     blurb:
-      "Probabilistic pursuit with knowledge updates and entropy tracking vs baseline strategies.",
-    tags: ["AI", "Search"],
-    // links: [{ label: "Write-up", href: "#" }],
-  },
-  {
-    title: "Semi-External MST",
-    blurb:
-      "O(n) RAM MST for dense graphs (Θ(n²) edges) — I/O-aware algorithm design.",
+      "Implemented an I/O-aware MST approach for dense graphs under an O(n) RAM constraint, emphasizing algorithmic efficiency and external-memory tradeoffs.",
     tags: ["Algorithms"],
-    // links: [{ label: "Paper Draft", href: "#" }],
-  },
-  {
-    title: "ROS/LIDAR Security Bot",
-    blurb:
-      "Room mapping + patrol behaviors using ROS Noetic, Arduino, and 2D LIDAR.",
-    tags: ["Robotics"],
-    // links: [{ label: "Demo", href: "#" }],
   },
 ];
 
 const EXPERIENCE = [
   {
-    role: "Software Test Analyst → Lead Developer",
-    org: "Infosys India Pvt. Ltd.",
-    date: "Sep 2021 — Dec 2024",
+    role: "Software Development Intern",
+    org: "Asensus Surgical",
+    date: "May 2026 — Aug 2026",
     points: [
-      "Built AI-driven QA platforms and chatbot evaluation systems",
-      "Led 4-6 engineers; delivered market-ready automation tools",
-      "Integrated Selenium pipelines, DOM parsers, and CI/CD",
+      "Developed software and engineering tools for a surgical robotics platform using C++ and Python",
+      "Built a real-time 3D visualization and replay workflow for surgical handle-tracking data using Rerun, MCAP/CSV, and DDS",
+      "Improved automated testing and coverage for event-driven C++ components, including state machines and middleware callbacks",
     ],
   },
   {
-    role: "M.S. in Computer Science (AI)",
-    org: "Rutgers University-New Brunswick",
+    role: "Software Test Analyst → Lead Developer",
+    org: "Infosys India Pvt. Ltd.",
+    date: "Sep 2021 — Jul 2024",
+    points: [
+      "Built AI-driven QA platforms, Selenium automation tools, and chatbot evaluation systems",
+      "Led developers and delivered production automation features for enterprise clients",
+      "Worked across Python, Java, Angular, Node.js, backend services, DOM tooling, and CI/CD",
+    ],
+  },
+  {
+    role: "M.S. in Computer Science",
+    org: "Rutgers University–New Brunswick",
     date: "Jan 2025 — Present",
     points: [
-      "Courses: Foundations of CS, Advanced Algorithms, Robotics/AI Planning",
-      "Projects: VIO, Space Rat, Semi-External MST",
+      "Focus areas: artificial intelligence, algorithms, robotics, computer vision, and systems",
+      "Projects include visual-inertial odometry, probabilistic search, computer vision, and memory-constrained graph algorithms",
     ],
   },
 ];
 
-const TAGS = ["All", "AI", "Robotics", "Algorithms", "Automation", "Full-stack", "NLP", "Perception", "Backend"] as const;
+const TAGS = ["All", "Robotics", "Perception", "Automation", "AI", "Full-stack", "NLP", "Algorithms", "Backend"] as const;
 
 type Tag = (typeof TAGS)[number];
 
@@ -176,7 +180,7 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="grid md:grid-cols-[1.2fr_1fr] gap-6 items-center">
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
-              <Rocket className="size-3.5" /> Open to internships & research collabs
+              <Rocket className="size-3.5" /> Open to software, robotics & AI opportunities
             </div>
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight">
               {PROFILE.name}
@@ -207,16 +211,16 @@ export default function Portfolio() {
             </CardHeader>
             <CardContent className="grid md:grid-cols-2 gap-4 text-sm">
               <div className="space-y-2">
-                <div className="font-medium flex items-center gap-2"><GraduationCap className="size-4" /> Rutgers — M.S. CS (AI)</div>
+                <div className="font-medium flex items-center gap-2"><GraduationCap className="size-4" /> Rutgers — M.S. Computer Science</div>
                 <div className="text-muted-foreground">Jan 2025 — Present</div>
-                <div className="font-medium flex items-center gap-2 pt-2"><Briefcase className="size-4" /> Infosys — Lead Dev</div>
-                <div className="text-muted-foreground">Sep 2021 — Dec 2024</div>
+                <div className="font-medium flex items-center gap-2 pt-2"><Briefcase className="size-4" /> Asensus — Software Dev Intern</div>
+                <div className="text-muted-foreground">May 2026 — Aug 2026</div>
               </div>
               <div className="space-y-3">
                 {[
-                  { name: "AI/QA Automation", level: 5 },
-                  { name: "Full-stack Dev", level: 4 },
-                  { name: "Robotics/Perception", level: 4 },
+                  { name: "Software Engineering", level: 5 },
+                  { name: "Robotics / C++", level: 4 },
+                  { name: "AI / Automation", level: 4 },
                 ].map((s) => (
                   <SkillBar key={s.name} name={s.name} level={s.level} />
                 ))}
